@@ -13,14 +13,17 @@
 <body>
     <header>
         <img src="../public/assets/img/telefoot-color-bg-01.svg" alt="Telefoot - La chaine du foot" />
-        <nav>
+        <nav class="nav-container">
             <ul>
-                <li>Home</li>
-                <li>Telefoot Bar</li>
+                <li><a href="?page=home" class="leftSide">Home</a></li>
+                <li><a href="" class="leftSide">Telefoot Bar</a></li>
+            </ul>
+            <ul>
+                <li><a href="" class="subscribe">S'abonner</a></li>
+                <li><a href="" class="login">Se connecter</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <img src="../public/assets/img/hero-01.7204aef.jpg" alt="">
@@ -204,7 +207,8 @@
                 <p>TELEFOOT BAR est le seul service qui réunit plus <strong>de 600 matchs</strong> du Championnat de
                     France de football par saison, soit 8 matchs par journée en exclusivité de la Ligue 1 Uber Eats dont
                     <strong>les affiches du vendredi et du dimanche soir</strong>, ainsi que le multiplex de la Ligue 2
-                    BKT le samedi soir (8 matchs/journée)</p>
+                    BKT le samedi soir (8 matchs/journée)
+                </p>
             </div>
         </section>
     </main>

@@ -7,6 +7,72 @@
 * {
   box-sizing: border-box;
 }
+/* ICIIII */
+
+a.leftSide{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+a.subscribe{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background-color: #E3A336;
+  padding: 10px;
+}
+a.login{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #000000;
+  padding: 10px;
+  border: solid white 2px;
+}
+.nav-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* Creation de compte */
+
+input, label{
+  display: block;
+  width: 35rem;
+  height: 2.5rem;
+  color: white;
+}
+input{
+  background-color: #191a20;
+  border: solid white 1px;
+}
+h1{
+  text-align: center;
+}
+.email-inputs{
+  display: flex;
+  justify-content: space-around;
+
+}
+.password-inputs{
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem auto;
+}
+
+input[type="submit"]{
+  margin: 5rem auto;
+  background-color: #E3A336;
+  vertical-align: middle;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+ 
+}
+
+.create-container{
+  margin: 150px;
+}
 
 html {
   font-size: 62.5%;

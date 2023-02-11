@@ -34,6 +34,8 @@ foreach($pages as $key => $value) {
 
 require("../config/index.php");
 
+$dsn = "mysql:host=" . DB_HOSTNAME .";dbname:" . DB_DATABASE;
+$db = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
 
 if($find) {
 
@@ -41,7 +43,7 @@ if($find) {
     require(DIR_CONTROLLER . $page . ".php" );
     require(DIR_VIEW . $page . ".php" );
 
-    $pageModel =  new $model();
+    $pageModel =  new $model($db);
     $pageController =  new $controller($pageModel);
     $pageView =  new $view($pageController);
 

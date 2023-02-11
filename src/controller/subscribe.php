@@ -1,4 +1,7 @@
 <?php
+
+
+
 class SubscribeController
 {
     public $model;
@@ -8,8 +11,22 @@ class SubscribeController
         $this->model = $model;
     }
 
-    public function createUser()
+    public function createUser(string $email, string $password)
     {
-        $query = $this->model->db->prepare("INSERT INTO telefoot_users(email,password) VALUES (:email, :password)");
+        if(empty($errors)){
+            $query = $this->model->db->prepare("INSERT INTO telefoot_users(email,password) VALUES (:email, :password)");
+            $query->bindParam(":email", $email);
+            $query->bindParam(":password", $password);
+
+            if($query->execute()){
+               echo "ouiouioui";
+            }else{
+                $errors["execute"] = "Comme dhaaaaaaaaaaaab ";
+                echo $errors["execute"];
+            }
+        }
+        
     }
 }
+
+?>

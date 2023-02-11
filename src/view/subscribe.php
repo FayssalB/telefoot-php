@@ -14,6 +14,6 @@ class SubscribeView
     public function render()
     {
         require($this->template);
-        
+        echo "njsdjgjbjbgfb";
     }
 }

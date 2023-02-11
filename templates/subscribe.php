@@ -1,6 +1,6 @@
 <?php
-//ICI IL VA SE PASSER QUELQUE CHOSE//
 
+//ICI IL VA SE PASSER QUELQUE CHOSE//
 if(!empty($_POST))
 {
     $errors = [];
@@ -12,7 +12,20 @@ if(!empty($_POST))
     {
         $errors["email"] = "email invalide";
     }
+
+    $uppercase = preg_match("/[A-Z]/", $password);
+    $lowercase = preg_match("/[a-z]/",$password);
+    $number = preg_match("/[0-9]/", $password);
+
+
+    if(!$uppercase || !$lowercase || !$number || strlen($password) < 6){
+        $errors["password"] = "Mot de passe qui ne respecte pas la norme: lettre majuscule + lettre minuscule + chiffre";
+        
+    }
+
+    var_dump($_POST);
 }
+
 
 ?>
 
@@ -50,29 +63,50 @@ if(!empty($_POST))
             <div class="email-inputs">
                 <div>
                     <label for="inputEmail">Email *</label>
-                    <input type="email" name="email" id="inputEmail">
+                    <input type="email" name="email" id="inputEmail" value="<?= $email ?? ""?>">
                     <?php 
                         if(!empty($errors["email"]))
                         {
-                            echo "<p>{$errors["email"]}</p>";
+                            ?>
+                            
+                            <p><?=$errors["email"]?></p>
+                            <?php
+                        }else{
+                            ?>
+                                <p>email valide</p>
+                            <?php
                         }
                     ?>
                 </div>
-                <div>
-                    <label for="confirmEmail">*Confirmer l'email *</label>
-                    <input type="email" name="" id="confirmEmail">
-                </div>
+                <!-- <div>
+                    <label for="confirmEmail">Confirmer l'email *</label>
+                    <input type="email" name="email" id="confirmEmail">
+                </div> -->
             </div>
 
             <div class="password-inputs">
                 <div>
                     <label for="inputPassword">Mot de passe *</label>
                     <input type="password" name="password" id="inputPassword">
+                    <?php
+                    if(!empty($errors["password"])){
+                        ?>
+                            <p><?=$errors["password"]?></p>
+                        <?php
+                    }
+                    ?>
                 </div>
-                <div>
+                <?php
+                    if(!empty($errors["password"])){
+                        ?>
+                            <p><?=$errors["password"]?></p>
+                        <?php
+                    }
+                    ?>
+                <!-- <div>
                     <label for="confirmPassword">Confirmer le mot de passe *</label>
-                    <input type="password" name="" id="confirmPassword">
-                </div>
+                    <input type="password" name="password" id="confirmPassword">
+                </div> -->
             </div>
 
             <input type="submit" value="Envoyer">

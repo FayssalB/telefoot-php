@@ -19,7 +19,7 @@
                 <li><a href="" class="leftSide">Telefoot Bar</a></li>
             </ul>
             <ul>
-                <li><a href="" class="subscribe">S'abonner</a></li>
+                <li><a href="?page=subscribe" class="subscribe">S'abonner</a></li>
                 <li><a href="" class="login">Se connecter</a></li>
             </ul>
         </nav>

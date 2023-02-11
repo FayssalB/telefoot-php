@@ -51,12 +51,13 @@ h1{
 }
 .email-inputs{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  
 
 }
 .password-inputs{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 3rem auto;
 }
 

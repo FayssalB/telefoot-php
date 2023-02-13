@@ -20,7 +20,7 @@
             </ul>
             <ul>
                 <li><a href="?page=subscribe" class="subscribe">S'abonner</a></li>
-                <li><a href="" class="login">Se connecter</a></li>
+                <li><a href="?page=login" class="login">Se connecter</a></li>
             </ul>
         </nav>
     </header>

@@ -3,7 +3,8 @@ class SubscribeView
 {
     public $controller;
     public $template;
-    
+    // public $email = "";
+    // public $password = "";
 
     public function __construct(SubscribeController $controller)
     {
@@ -14,6 +15,8 @@ class SubscribeView
     public function render()
     {
         require($this->template);
-        echo "njsdjgjbjbgfb";
+        if(isset($_POST)){
+            $this->controller->createUser();
+        }
     }
 }

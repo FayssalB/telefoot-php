@@ -17,6 +17,11 @@ $pages = array(
         "model" => "SubscribeModel",
         "controller" => "SubscribeController",
         "view" => "SubscribeView"
+    ),
+    "login" => array(
+        "model" => "LoginModel",
+        "controller" => "LoginController",
+        "view" => "LoginView"
     )
 );
 
@@ -34,7 +39,7 @@ foreach($pages as $key => $value) {
 
 require("../config/index.php");
 
-$dsn = "mysql:host=" . DB_HOSTNAME .";dbname:" . DB_DATABASE;
+$dsn = "mysql:host=" . DB_HOSTNAME . ";dbname=" . DB_DATABASE;
 $db = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
 
 if($find) {
